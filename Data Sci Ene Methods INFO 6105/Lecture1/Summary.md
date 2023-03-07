@@ -1,6 +1,6 @@
 # Lecture1 Summary
 
-### Summary Credits belong to Chakety
+#### Summary Credits belong to Chakety
 
 ## Installed the R studio and Anaconda Navigator
 
