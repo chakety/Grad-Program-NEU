@@ -1,6 +1,6 @@
 # Lecture1 Summary
 
-### Summary Credits belong to Chakety
+#### Summary Credits belong to Chakety
 
 ## Installed the R studio and Anaconda Navigator
 
@@ -25,5 +25,5 @@
 - It is not only expresses the frequentist statistics, but also being accepted in machine learning.
 
 
-# **Guys! Data Science is the most sex job!**
-Quoted from professor. 
+# **Guys! Data Science is the most sex science!**
+Said by professor, words may not exactly the same. 
