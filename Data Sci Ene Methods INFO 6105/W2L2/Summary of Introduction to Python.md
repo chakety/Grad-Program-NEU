@@ -3,6 +3,7 @@
 1. [Python](#python)
 2. [The Philosophy of Python](#the-philosophy-of-python)
 3. [Operators](#operators)
+   1. [The Assignment operator `=`](#the-assignment-operator-`=`)
 
 
 ## Python
