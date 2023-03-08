@@ -17,6 +17,9 @@
       - [Some functions](#some-functions)
     - [Container Types](#container-types)
       - [Lists](#lists)
+      - [Tuples](#tuples)
+      - [Sets](#sets)
+      - [zip](#zip)
 
 ## Python
   - Simple: Easy to read and relativel easy to lean.
@@ -188,4 +191,59 @@ Some types are `list`,`tuple`,`set`, and `dictionary`
     - `list[::-1]`
   - list can create matrix too
     - ` x = [[1,2,3],[4,5,6]]`
-    - 
+    - `x[1][0]` will print 4.
+  - `append` applies to list for adding new item.
+    - `int_list.append('hello!')` prints [1, 2, 3, 4, 5, 6, 'hello!'].
+  - list is **mutable**!
+    - ` int_list[0] = 2` prints [2, 2, 3, 4, 5, 6, 'hello!'].
+  - `[::-1]` will output the same result as `list.reverse()`
+    - **HOWEVER**, `list.reverse()` will change the list itself while the `[::-1]` will not.
+
+#### Tuples
+  - Tuple, like list, is also iterable and can be indexed like list.
+  - Tuple is **IMMUTABLE**
+  - `int_tup = (1,2,3,5,6,7)` 
+  - `int_tup[1:3]` prints (2,3)
+  - `int_tup.index(5)` give the index of 5 which is 3.
+  - the construction also works:
+    - `tup = 1,2,3` gives a tuple output (1,2,3)
+  
+#### Sets
+  - set doesn't have duplication. 
+  - linear algebra works with set too, like Union,intersection, and etc.
+
+ ```python
+  empty_set = set()
+
+  filled_set = {1, 2, 2, 3, 4}
+
+  filled_set.add(5) 
+
+  # Do set intersection with &
+  other_set = {3, 4, 5, 6}
+  filled_set & other_set  # => {3, 4, 5}
+
+  # Do set union with |
+  filled_set | other_set  # => {1, 2, 3, 4, 5, 6}
+
+  # Do set difference with -
+  {1, 2, 3, 4} - {2, 3, 5}  # => {1, 4}
+
+  # Check if set on the left is a superset of set on the right
+  {1, 2} >= {1, 2, 3}  # => False
+
+  # Check if set on the left is a subset of set on the right
+  {1, 2} <= {1, 2, 3}  # => True
+
+  # Check for existence in a set with in
+  2 in filled_set  # => True
+  10 in filled_set  # => False
+  10 not in filled_set # => True
+  ```
+
+#### zip
+  ```python
+  a = range(5) # print (list(a)) -> 0,1,2,3,4
+  b = range(8,15)# print (list(b)) -> 8,9,10,11,12,13,14
+  list(zip(a,b)) # [(0, 8), (1, 9), (2, 10), (3, 11), (4, 12)] 
+  ```
