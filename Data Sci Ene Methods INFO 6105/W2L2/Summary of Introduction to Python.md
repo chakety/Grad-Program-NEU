@@ -1,10 +1,21 @@
 # Part I Summary
 ## Table of Contents
-1. [Python](#python)
-2. [The Philosophy of Python](#the-philosophy-of-python)
-3. [Operators](#operators)
-   1. [The Assignment operator `=`](#the-assignment-operator-`=`)
-
+- [Part I Summary](#part-i-summary)
+  - [Table of Contents](#table-of-contents)
+  - [Python](#python)
+  - [The philosophy of Python](#the-philosophy-of-python)
+  - [Operators](#operators)
+    - [The Assignment operator `=`](#the-assignment-operator-)
+  - [Singular Types and Data Structures](#singular-types-and-data-structures)
+    - [Floats](#floats)
+    - [Integers and `long` Integers](#integers-and-long-integers)
+    - [Booleans](#booleans)
+    - [More Complicated Operators](#more-complicated-operators)
+    - [String](#string)
+      - [Example](#example)
+      - [Some functions](#some-functions)
+    - [Container Types](#container-types)
+      - [Lists](#lists)
 
 ## Python
   - Simple: Easy to read and relativel easy to lean.
@@ -159,4 +170,21 @@ my_array = sentence.split() # by default split on whitespace, return a list.
 
 **String is IMMUTABLE**
   
+### Container Types
+Container types are types that inlcude *many* values.
+Some types are `list`,`tuple`,`set`, and `dictionary`
+  - Set is similar to list, but will remove all the duplicates automatically.
+  - Tuple is also similar to list, but **immutable**.
+  - Dictionary allows to relate two items: A `Key` and a `Value`
 
+#### Lists
+  - list can contain anything, the same type or mixed type.
+    - `str_list = ['thing', 'stuff', 'truc']`
+    - `mixed_list = [1, 1., 2+3J, 'sentence', """long sentence"""]`
+  - list can be printed by `for` loop
+  - list is *iterable*, it can be accessed like strings/
+    - `list[0]`
+    - `list[::-1]`
+  - list can create matrix too
+    - ` x = [[1,2,3],[4,5,6]]`
+    - 
