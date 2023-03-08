@@ -1,4 +1,9 @@
 # Part I Summary
+## Table of Contents
+1. [Python](#python)
+2. [The Philosophy of Python](#the-philosophy-of-python)
+3. [Operators](#operators)
+
 
 ## Python
   - Simple: Easy to read and relativel easy to lean.
@@ -128,4 +133,29 @@ A string can also be multipled: `"Hello" *3`
 
 A string is a python *iterable*
   - "This is a string"[0] will print out 'T'
+
+
+#### Example
+  ```python
+  sentence = """Who's going to win the Superbowl again?
+  Mahomes maybe?"""
+  len(sentence)     # = > 30
+  sentence[0:9]     # = > "Who's goi"
+  sentence[0:9:2]   # = > 'Wosgi'
+  sentence[ : :-1]  # = > "?ebyam semohaM\n\n?niaga lwobrepuS eht niw ot gniog s'ohW"
+  sentence[:-1]     # = > "Who's going to win the Superbowl again?\n\nMahomes maybe"
+  ```
+#### Some functions
+```python
+sentence.upper()# conveting all the letters to upper letters
+sentence.endswith('x')# check whether the sentence is end with sepcific letter x, return a boolean resutl.
+sentence.startswith('x') # check whether the sentence is statr with specific letter x, return a boolean result.
+my_array = sentence.split() # by default split on whitespace, return a list. 
+' '.join(my_array)# Adding a space between each sentence. Tips: my_array is a list. 
+"The answer is %4.2f" % ( a ) # =>'The answer is 42.00'
+"The answer is {0:<6.4f}, {0:<6.4f} and not {1:<6.4f} ".format(a,42.0001)#=>'The answer is 3.0000, 3.0000 and not 42.0001 '
+```
+
+**String is IMMUTABLE**
   
+
