@@ -1,11 +1,11 @@
 # Part I Summary
 
 ## Python
-    - Simple: Easy to read and relativel easy to lean.
-    - Expressive: Less line of code, less bugs and easy to maintain.
-    - Powerful: works as script-type tool which can be applied into Big Data, High Performance Computing applications, data science, and etc.
-    - Batteries included: huge standard libararies,
-        (Well, personally I don't agree with, since if it is battery comsuing, why we don't use python in iot devices.)
+  - Simple: Easy to read and relativel easy to lean.
+  - Expressive: Less line of code, less bugs and easy to maintain.
+  - Powerful: works as script-type tool which can be applied into Big Data, High Performance Computing applications, data science, and etc.
+  - Batteries included: huge standard libararies,
+      (Well, personally I don't agree with, since if it is battery comsuing, why we don't use python in iot devices.)
   
 ## The philosophy of Python
 
@@ -54,9 +54,9 @@ import this
   Namespaces are one honking great idea -- let's do more of those!
 
 ## Operators
-   ** - 1st component of programming: *Variables*
+    - 1st component of programming: *Variables*
     - 2nd component of programming: *containers*
-    - 3rd component of programming: *type***
+    - 3rd component of programming: *type*
 
 ### The Assignment operator `=`
 `a = 5 `
@@ -119,3 +119,15 @@ not False  # => True
   we use single quotes.
 - What about multiple lines? Triple Quotes!
 
+`str` can help covert types like `float`,`int`, and `long` to `string`
+
+A string can be added with/without `+`
+
+A string can also be multipled: `"Hello" *3`
+
+  The above result will print like: HelloHelloHello
+
+A string is a python *iterable*
+
+  "This is a string"[0] will print out 'T'
+  
