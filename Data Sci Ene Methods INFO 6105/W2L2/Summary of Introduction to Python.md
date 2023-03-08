@@ -1,4 +1,5 @@
 # Part I Summary
+
 ## Table of Contents
 - [Part I Summary](#part-i-summary)
   - [Table of Contents](#table-of-contents)
@@ -71,9 +72,9 @@ import this
   Namespaces are one honking great idea -- let's do more of those!
 
 ## Operators
-    - 1st component of programming: *Variables*
-    - 2nd component of programming: *containers*
-    - 3rd component of programming: *type*
+  - 1st component of programming: *Variables*
+  - 2nd component of programming: *containers*
+  - 3rd component of programming: *type*
 
 ### The Assignment operator `=`
 `a = 5 `
