@@ -32,7 +32,8 @@
 
 ### dplyr:summarize()
     - use it with aggregate functions, which take a vector of values, and return a **single** number
-    - some functions in base R: min(), max(), mean(),sd(),median(),n('number of observation in the current group'),n_distinct(x:'count the nunmber of unique values in x')
+    - some functions in base R: min(), max(), mean(),sd(),median(),n('number of observation in the current group'),
+                                n_distinct(x:'count the nunmber of unique values in x')
 
 ### Using %>%
     - **%>%** is aa pipe which connects the first and second function.
