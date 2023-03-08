@@ -124,10 +124,8 @@ not False  # => True
 A string can be added with/without `+`
 
 A string can also be multipled: `"Hello" *3`
-
-  The above result will print like: HelloHelloHello
+  - The above result will print like: HelloHelloHello
 
 A string is a python *iterable*
-
-  "This is a string"[0] will print out 'T'
+  - "This is a string"[0] will print out 'T'
   
