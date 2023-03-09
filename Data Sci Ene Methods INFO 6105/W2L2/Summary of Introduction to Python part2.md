@@ -217,7 +217,7 @@ magic(1, 2, 3, a=4,b=5,c=6)
 ## Generators
 *Generates* values as they are requested instead of storing everything up front. 
 
-A gernal code like:
+A general code like:
 ```python
 def first_n(n):
    '''Build and return a list'''
@@ -240,7 +240,9 @@ def firstn(n):
 Since `first_n(n)` is a function, we can use `print(first_n(30))` to print the results directly. **However** `first(n)` is a generator, we cannot print the result directly, we use *for loop*, *list* , or *set* to print instead.
 
 **Note**
+
 `doubles1 = [2 * n for n in range(50)]` is a list 
+
 `doubles2 = (2 * n for n in range(50))` is a generator
 
 `itertools.takewhile` can create iterator for a loop
