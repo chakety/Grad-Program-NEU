@@ -198,3 +198,69 @@ callable((lambda_:_>2))# return  True
 (lambda x, y: x ** 2 + y ** 2)(2, 1)  # => 5
 ```
 
+both `list` and `set` can be used as anonymous funtions
+
+Python's `*args` and `**kwargs` constructs can iterate over **position argument** and named **arguments**
+
+Example:
+```python
+def magic(*args, **kwargs):
+  print ("unnamed args: ", args)
+  print ("keyword args: ", kwargs)
+
+
+magic(1, 2, 3, a=4,b=5,c=6) 
+# gives (1,2,3) as args in tuple
+# gives {'a': 4, 'b':5, 'c':6} as dict
+```
+
+## Generators
+*Generates* values as they are requested instead of storing everything up front. 
+
+A gernal code like:
+```python
+def first_n(n):
+   '''Build and return a list'''
+       num, nums = 0, []
+    while num < n:
+        nums.append(num)
+        num += 1
+    return nums
+```
+This function is straightforward, and it also creates a list of memory, with the number n increasing, the usage of memory also increaes. 
+
+**Therefore, a generator can help!**
+```python
+def firstn(n):
+    num = 0
+    while num < n:
+        yield num
+        num += 1
+```
+Since `first_n(n)` is a function, we can use `print(first_n(30))` to print the results directly. **However** `first(n)` is a generator, we cannot print the result directly, we use *for loop*, *list* , or *set* to print instead.
+
+**Note**
+`doubles1 = [2 * n for n in range(50)]` is a list 
+`doubles2 = (2 * n for n in range(50))` is a generator
+
+`itertools.takewhile` can create iterator for a loop
+```python 
+def count():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+import itertools
+
+#add squares less than 100
+squares = (i*i for i in count())
+bounded_squares = itertools.takewhile(lambda x : x < 100, squares)
+total = 0
+for i in bounded_squares:
+    total += i
+total# => 285
+```
+`next` can get the next item. 
+
+
