@@ -157,7 +157,7 @@ for t in text:
 ## Recycling code in Python
 Some of the functions may be reused several times, to save time, we can create a file end with **.py** 
 
-try use %%file [file name].py to overwrite this file 
+try use `%%file [file name].py` to overwrite this file 
 `%whos` can help to get all the valiables which declared in the notebook or external files.
 `dir()` yeilds the functions
 `help()` provides imformation about the module.
@@ -181,6 +181,7 @@ Step by Step define can be:
 Duo-lipa way: `creater_adder(10)(3)`
 
 ### Using `lambda` to define anonymous fucntion
+
 ```python
 def f(x):
     return x > 2
@@ -195,7 +196,5 @@ callable((lambda_:_>2))# return  True
 
 #We can also have two arguments:
 (lambda x, y: x ** 2 + y ** 2)(2, 1)  # => 5
-
-
-
 ```
+
