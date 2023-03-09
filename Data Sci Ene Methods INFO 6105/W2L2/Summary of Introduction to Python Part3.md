@@ -42,6 +42,7 @@ class Human(object):
 
 we can get:
 ```python
+i = Human
 # Update the property
 i.age = "A"
 
