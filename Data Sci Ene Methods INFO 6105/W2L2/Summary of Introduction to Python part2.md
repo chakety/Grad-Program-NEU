@@ -23,6 +23,7 @@
  Example2:
  `a = [10,11,12,13,14]`
  To get each element add 3 if it greater than 5;
+
  An "Ugly" code will like:
  ```python
  for x in a:
@@ -95,5 +96,106 @@ x is y # return False since x is float and y is int type
 
 ### common comparison
 ```python
+a = 5
+b = 5
+a == b  #=> True
+a != b  #=> False
+(a > 4) and (b < 7) #=> True
+(a > 4) and (b > 7) #=> False
+(a > 4) or (b > 7)  #=> True
+```
+
+### All and Any
+```python
+x = [5,6,2,3,3]
+cond = [item > 2 for item in x] # => return a list: [True, True, False, True, True]
+all(cond) # => False
+any(cond) # => True
+```
+
+## Control flow Structures
+Indentation is important in python!
+But Jupyter Notebook will figure it out itself.
+
+`'aa' if False else 'bb'`
+
+### if...elif...else
+```python
+x = 10
+
+if x < 10: # not met
+    x = x + 1
+elif x > 10: 
+    x = x - 1 # not met either 
+else: 
+    x = x * 2
+```
+
+### The For loop
+```python
+count = 0
+# x = range(1,10) # range creates a list ... 
+# xrange is a convenience function, it creates an iterator rather than a list
+# which has a smaller memory footprint
+x = range(1,10) 
+for i in x:
+    count += i
+    print(count)
+```
+
+### try...except
+```python
+text = ('a','1','54.1','43.a')
+for t in text:
+    try:
+        temp = float(t)
+        print(temp)
+    except ValueError:
+        print(str(t) + ' is Not convertible to a float')
+```
+
+## Recycling code in Python
+Some of the functions may be reused several times, to save time, we can create a file end with **.py** 
+
+try use %%file [file name].py to overwrite this file 
+`%whos` can help to get all the valiables which declared in the notebook or external files.
+`dir()` yeilds the functions
+`help()` provides imformation about the module.
+using the `[module name].DATA` can call thoses fucntions. 
+
+## Functions and Anonymous Functions are first class in Python
+
+### passing a fucntion to a function
+```python
+def create_adder(x):
+    def adder(y):
+        return x + y
+
+    return adder
+```
+
+Both `create_adder(x)` and `adder(y)` are functions. 
+Step by Step define can be:
+- `add_10 = creater_adder(10)`
+- `add_10(3)`
+Duo-lipa way: `creater_adder(10)(3)`
+
+### Using `lambda` to define anonymous fucntion
+```python
+def f(x):
+    return x > 2
+
+callable(f) # return True, callable is used for check a function.
+
+#This function can also write with lambda function:
+(lambda_:_>2)(3)
+#it will give the same result as f(3)
+
+callable((lambda_:_>2))# return  True
+
+#We can also have two arguments:
+(lambda x, y: x ** 2 + y ** 2)(2, 1)  # => 5
+
+
 
 ```
