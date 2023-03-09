@@ -1,4 +1,22 @@
 # Part 2 Summary
+## Table of Content
+1. [Duo-lipa Style Coding](#duo-lipa-style-coding)\
+2. [(Cont.) Dictionaries](#cont-dictionaries)
+   1. [Example](#example)
+3. [Logical Operators](#logical-operators)
+   1. [is/is not](#isis-not)
+   2. [common comparison](#common-comparison)
+   3. [All and Any](#all-and-any)
+4. [Control flow Structures](#control-flow-structures)
+   1. [if...elif....else](#ifelifelse)
+   2. [The for loop](#the-for-loop)
+   3. [try...except](#tryexcept)
+5. [Recycling code in Python](#recycling-code-in-python)
+6. [Functions and Anonymous Functions are first class in Python](#functions-and-anonymous-functions-are-first-class-in-python)
+   1. [passing a fucntion to a function](#passing-a-fucntion-to-a-function)
+   2. [Using `lambda` to define anonymous fucntion](#using-lambda-to-define-anonymous-fucntion)
+7. [Generators](#generators)
+
 
 ## Duo-lipa Style Coding
  Example1: 
