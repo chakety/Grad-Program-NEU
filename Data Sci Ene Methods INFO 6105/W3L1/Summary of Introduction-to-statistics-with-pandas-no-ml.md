@@ -11,6 +11,7 @@ Application of `pandas`
 - Matrix data
 - other form of observation/statistic data sets.
 
+
 Key features:
 - shape mutability: Columns can be added or detele, index value can be modified, and dimension can be changed too. 
 - Automatic and explicit data aligbment
@@ -38,6 +39,7 @@ will give:
 The series can automatically get its own index.
 eg:
 `obj.value # -> array([10,20,30,40,50], dtype = int64)`
+
 `obj.index # -> RangeIndex(star = 0, stop = 5, step = 1)`
 
 The name of index can also be changed like:
@@ -84,9 +86,15 @@ If we do not want to use `pd.DataFranme.from_dict(nba, orient = 'index')` all th
 
 Example is given like : `nba2 = {"east": {'MA': 'Celtics', 'IN': "Cavs"}, "west": {"CA": "Warriors", "CAS": "Lakers", "IL": "Chicago"}}`
 
-In this example above, MA,In,CA,CAS,and IL are the index. Compare the result to the previous, we can say it customzied the name of index.
+In this example above, MA, In, CA, CAS, and IL are the index. Compare the result to the previous, we can say it customzied the name of index.
 
 And if we try to look at `type(nbadf.loc['MA':'Celtics'])` , it is a **float**.
 
 Hint: using `nbadf.loc[]` can type the name of index, but when using `nbadf.iloc[]`, it only allows to input **integer**.
+
+we can also reindex the datafram. 
+
+Using `obj2 = nbadf.reindex(['MA', 'IN', 'IL', 'CA', 'CAS'])` will change the data too. 
+
+## How to apply math formulas to the data?
 
