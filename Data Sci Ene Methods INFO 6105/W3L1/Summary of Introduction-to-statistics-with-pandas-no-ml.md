@@ -28,7 +28,7 @@ To use pandas, try` import pandas as pd`.
 An exmaple like: 
 `obj = pd.Series([10,20,30,40,50])` 
 will give:
-
+|---|---|
 |0  | 10|
 |1  | 20|
 |2  | 30|
@@ -46,7 +46,7 @@ The name of index can also be changed like:
 
 `obj = pd.Series([10,20,30,40,50], index = ['a','b','c','d','e'])`
 will print like:
-
+|---|---|
 |a |  10|
 |b |  20|
 |c |  30|
