@@ -25,10 +25,12 @@ Key features:
 To use pandas, try` import pandas as pd`. 
 
 An exmaple like: 
-`obj = pd.Series([10,20,30,40,50])`
+`obj = pd.Series([10,20,30,40,50])` 
 will give:
+```python
 0  | 10
 1  | 20
 2  | 30
 3  | 40
 4  | 50
+```
