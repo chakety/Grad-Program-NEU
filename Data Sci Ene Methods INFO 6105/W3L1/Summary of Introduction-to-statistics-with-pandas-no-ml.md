@@ -112,3 +112,23 @@ def f(x): return x.max() - x.min()
 Then, try `nbafd.apply(f)`.
 
 ## 3D Dataframes
+We can also create a 3D datarframe with three aixs.
+
+Example:
+```python
+import numpy as np
+import pandas as pd
+
+A = np.array(['one', 'one', 'two', 'two', 'three', 'three'])
+B = np.array(['start', 'end']*3)
+C = [np.random.randint(10, 99, 6)]*6
+df = pd.DataFrame(zip(A, B, C), columns=['A', 'B', 'C'])
+df.set_index(['A','B'], inplace=True)
+```
+To extend the subline length to the max, try this:
+```python
+max_len = max(len(sublist) for sublist in C)
+for sublist in C:
+    list(sublist).extend([np.nan]*(max_len - len(sublist)))
+``` 
+
