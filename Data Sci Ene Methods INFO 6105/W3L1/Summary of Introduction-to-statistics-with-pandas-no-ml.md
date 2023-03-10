@@ -55,7 +55,7 @@ will print like:
 | d   | 40    |
 | e   | 50    |
 
-To access the value, either access the index name `obj['a]`
+To access the value, either access the index name `obj['a']`
 or the value of index `obj[0]` can get the same answer.
 
 The value inside can also be changed: `obj['a'] = 'foo'`
@@ -94,9 +94,21 @@ And if we try to look at `type(nbadf.loc['MA':'Celtics'])` , it is a **float**.
 
 Hint: using `nbadf.loc[]` can type the name of index, but when using `nbadf.iloc[]`, it only allows to input **integer**.
 
-we can also reindex the datafram. 
+We can also reindex the datafram. 
 
 Using `obj2 = nbadf.reindex(['MA', 'IN', 'IL', 'CA', 'CAS'])` will change the data too. 
 
 ## How to apply math formulas to the data?
+Using `pd.apply()`
+Wrting a dataframe with numbers:
+```python
+import numpy as np
+nbadf3 = pd.DataFrame(np.random.randn(3,3), index=['MA', 'NY', 'TX'], columns=['Celtics', 'Knicks', 'Rockets'])
+```
+we can first define a function:
+```python
+def f(x): return x.max() - x.min()
+```
+Then, try `nbafd.apply(f)`.
 
+## 3D Dataframes
