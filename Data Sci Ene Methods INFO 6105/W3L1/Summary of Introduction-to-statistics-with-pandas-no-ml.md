@@ -132,3 +132,52 @@ for sublist in C:
     list(sublist).extend([np.nan]*(max_len - len(sublist)))
 ``` 
 
+# Finance with pandas
+## Time Serise Exploratory Data Analysys(EDA)
+  - A series of data points ordered in time.
+  - Time is the often independt variable 
+  - Makes forcast for the future.
+
+## EDA characteristics:
+  - Is it **stationary**? if yes, it won't change over time. 
+  - Is the target varible **autocorrelated**?
+  - Is there are **seasonality**? periodic fluctuation. 
+
+## Moving Average
+  - Simply states that the *next* observation is the mean of *all past* observation
+
+## Exponential Smoothing
+  - Uses a similar logic to moving average.
+  - Has different decresing weight to each observations. 
+  
+  ### Double Exponential smoothing
+  - Used when there is a trend in the time serise. 
+  - s recursive use of exponential smoothing **twice**
+  ### Triple Exponential smoothing
+  - Adding a seasonal smoothing factor.
+## Modeling
+  - If s serise was truned into Stationary process.The Dickey-Fuller test can be applied for identification.
+    - if the result is less than 0.01, the time series is stationary.
+In addition, the autocorrelation plot can also tell thether the date is seasonality or not.
+  - The autocorrelation repsents the degree of similarity a given time series and a lagged version of itself over successive time intervals.
+  - It measures the relationship between a varibale's current value and its past value.
+  - **HINT**: Uncorrelated does not mean *random*. It just means there is no relation. 
+    - model of validation can check the random.
+
+# Interaction learning with pandas
+Basically, how to use it to import Youtube Video.
+```python
+from IPython.display import YouTubeVideo
+YouTubeVideo('T5pRlIbr6gg')
+```
+# Data Aggregation & Pivoting with pandas
+To sorting data, try `df.sort_values()`
+
+To calculate the sum, try `df['Total'] = df.iloc[::,4:10].sum(axis = 1)`
+
+To rearrange the columns, try:
+```python
+cols list(df.columns) #To make the name of index a list.
+df = df[cols[0:4]] + [cols[-1]] + cols[[4:12]]# rearrage the columns. since we have the 'Total' as the last one, we just move it.
+```
+
