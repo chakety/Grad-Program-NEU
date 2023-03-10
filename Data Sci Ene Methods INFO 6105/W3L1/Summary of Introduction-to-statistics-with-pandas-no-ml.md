@@ -141,6 +141,7 @@ for sublist in C:
 ## EDA characteristics:
   - Is it **stationary**? if yes, it won't change over time. 
   - Is the target varible **autocorrelated**?
+    - Autocorrelation allows to find *repeating* patterns in data
   - Is there are **seasonality**? periodic fluctuation. 
 
 ## Moving Average
@@ -180,4 +181,43 @@ To rearrange the columns, try:
 cols list(df.columns) #To make the name of index a list.
 df = df[cols[0:4]] + [cols[-1]] + cols[[4:12]]# rearrage the columns. since we have the 'Total' as the last one, we just move it.
 ```
+To save the new data as spreadsheet, try:
+`df.to_excel('data/pokemon00.xlsx', index=False)`
+
+To filter serval data, try
+`df3 = df.loc[(df['Type 1'] == 'Grass') & (df['Type 2'] == 'Poison') & (df['HP'] > 70)]`
+
+We can also use Group By to calcualte some data:
+`df4 = df.groupby(['Type 1', 'Type 2']).count()`
+
+`df4 = df.groupby(['Type 1', 'Type 2']).sum()`
+
+`df4 = df.groupby(['Type 1', 'Type 2']).mean()`
+
+To display the plot, try `df5.plot(kind='barh')`.
+
+barh is a name of barhistorgram
+
+# Statistics with pandas & friens: The Histogram
+`statsmodels` is a statistic library which inclues sample datasets.
+
+## probabilty distribution
+  - mathematical function which provides the pribabilities of different possible outcones.
+  - A description of a random phenonmenon in terms of probabilities of events.
+  
+To get the infor about on columns, try `df['SUNACTIVITY'].describe()`
+
+pandas actually have autocorrelation plot: `pd.plotting.autocorrelation_plot(df['SUNACTIVITY'])`
+
+## Outliers
+  - a data point that differs significantly from other observation. 
+  - maybe due to varability in the measurement or indicate experimental error.
+  - Are often taken to be any points that are ***two standard deviation*** removed from the **mean**
+  
+## Histograms
+  - Undersdtanding how the data is distributed for modeling.
+
+A data model is a funcrtion that auto-encoding data.
+
+It learns all the data and be able to output the data by remembering a much smaller amount of data. 
 
