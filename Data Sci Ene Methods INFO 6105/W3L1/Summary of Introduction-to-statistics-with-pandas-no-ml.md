@@ -66,16 +66,27 @@ Example: import a data as a dictionary structure:
 `nba = {"east": ['Celtics', "Cavs", "76ers"], "west": ["Warriors", "Lakers", "Chicago"]}`
 `nbadf = pd.DataFrame(nba)`
 
-To reverse it, just use `nbadf.T`
+To reverse it, just use `nbadf.T`,but it won't change the nbadf itself, which means if we print the data of nbadf, it will display the same result as we did in the beginning. 
 
 The type of nbadf is **pandas.core.frame.Dataframe**
 
-Since it imports as a 2D array, the length must be the same.
+For thoes have differen array length, simply use `pd.DataFrame()` will cause error
 
-Example like `nba = {"east": ['Celtics', "Cavs"], "west": ["Warriors", "Lakers", "Chicago"]}` will cause error.
+To fix it, changed`pd.DataFrame()` to `pd.DataFranme.from_dict(nba, orient = 'index')`
 
+This will automatically add `None` for missing item.
 
-Unless, we can try: `nba = {"east": ['Celtics', "Cavs"], "west": ["Warriors", "Lakers", "Chicago"]}`
+To get the east row, try `nbadf.loc['east']`
 
-This will automatically add None for missing item.
+To get the first column, try `nbadf.loc[:,0]`. This means to get all the rows with first column.
+
+If we do not want to use `pd.DataFranme.from_dict(nba, orient = 'index')` all the time, we can also try to generat the data as dictionary.
+
+Example is given like : `nba2 = {"east": {'MA': 'Celtics', 'IN': "Cavs"}, "west": {"CA": "Warriors", "CAS": "Lakers", "IL": "Chicago"}}`
+
+In this example above, MA,In,CA,CAS,and IL are the index. Compare the result to the previous, we can say it customzied the name of index.
+
+And if we try to look at `type(nbadf.loc['MA':'Celtics'])` , it is a **float**.
+
+Hint: using `nbadf.loc[]` can type the name of index, but when using `nbadf.iloc[]`, it only allows to input **integer**.
 
