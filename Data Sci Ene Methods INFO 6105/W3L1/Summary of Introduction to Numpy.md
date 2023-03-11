@@ -184,3 +184,6 @@ c = np.array([a, b])
 ```
 
 ## Incredibly useful Numpy APIs
+The numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0) function returns evenly spaced numbers over a specified interval defined by the first two arguments of the function (start and stop — required arguments). The number of samples generated is specified by the third argument num.
+
+If omitted, 50 samples are generated. One important thing to bear in mind while working with this function is that the stop element is provided in the returned array (by defaultendpoint=True), unlike in the built-in python function range.
