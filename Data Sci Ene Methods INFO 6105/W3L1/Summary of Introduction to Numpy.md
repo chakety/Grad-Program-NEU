@@ -36,3 +36,109 @@ To access the values in different array:
 - x3[index][index][index] is equalvent to x3[index,index,index]
 
 #### 1D subarrays.
+For array `x = np.arang(10)`
+  - To get the first five elements, try `x[:5]`
+  - To get the elements after index 5, try `x[5:]` 
+  - To get the middle sub-array, try `x[4,7,2]`
+  - To get every other element, try `x[::2]`
+
+#### Multi-dimensional subarrays
+For arrary `x2`:
+  - To get two rows, three columns, try `x2[:2, :3]`
+  - To get all rows, every other column, try x2[:,::2]
+
+### Reshaping Arrays
+Example:
+
+`np.arange(1,28).reshape((3,3,3))`
+
+
+`squeeze`: allow to structure out space, which means remove the axes of length one from array.
+
+Both `reshap` and `squeeze` will use a no-copu view of the initial array, the origial data format will not be changed. 
+
+Normally, it is common to convert a 1D array into 2D row or column matrix.
+
+Any time you see a 1 in the number of elements of one of the dimensions, it means that we are doing an embedding of a lower-dimensional object into a higher-dimensional space.
+
+### Array Concatenation and Splitting
+#### Concatentation
+Join two arrays in NumPy and takes a **tuple** or **list** of array as its first argument.
+
+Some examples:
+```python
+x = np.array([1, 2, 3])
+y = np.array([3, 2, 1])
+# will print out array([1,2,3,3,2,1])
+
+grid = np.array([[1, 2, 3],
+                 [4, 5, 6]])
+np.concatenate([grid, grid])
+# will print:
+#array([1,2,3],
+#      [4,5,6],
+#      [1,2,3],
+#      [4,5,6])
+
+np.concatenate([grid, grid], axis=1)
+#will print 
+#array([1,2,3,1,2,3],
+#      [4,5,6,4,5,6])
+```
+
+#### Splitting of arrays
+Opposite of concatenation. 
+
+Example:
+```python
+x = [1, 2, 3, 99, 99, 3, 2, 1]
+x1, x2, x3 = np.split(x, [3, 5])
+
+#will print out [1,2,3] [4,5,6] [7,8,9]
+``` 
+
+### Finding maximum element
+Using `numpy.argmax(a, axis=None, out =None)`, it returns the indices of the maximum value along an axis. 
+
+Example：
+```python
+# numpy array
+array = np.array([[1,2,3], [4,5,6]])
+
+# index of maximum value
+max_pos = np.argmax(array)
+
+#max_pos = 5, the index of the largest value
+```
+
+Another Example can be:
+```python
+# numpy array
+array = np.array([[1,2,3],[4,5,6]])
+print(array)
+
+# index of maximum value along axis 0
+max_pos_0 = np.argmax(array, axis=0)
+print(max_pos_0)
+# array([1, 1, 1], dtype=int64)
+
+# index of maximum value along axis 1
+max_pos_1 = np.argmax(array, axis=1)
+max_pos_1
+# array([2, 2], dtype=int64)
+```
+### Plotting with matplotlib
+By using `import matplotlib.pyplot as plt`, we can plot figures.
+
+### Operation profiling
+To interpret an input as a matrix, try:
+```python
+np.array('1,2,3,4')
+np.array(np.mat('1,2; 3,4'))
+```
+### Random arrays
+`data = np.random.rand(4,4,4)`
+
+### Boolean indexing
+We can use boolean expression as index. 
+
