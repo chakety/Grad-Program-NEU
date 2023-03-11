@@ -35,4 +35,16 @@ For me: Statistics is the methodology to gathering all the information and seeki
 - **Convariance** is a measure that indicates how two variables are related from a linear perspective. 
   - A positive covariance means the variabale are positively linearly related.
 - **Conrrelation** is the convariance renormalized, which is expressed in %. 
-- 
+  - It is a unit of measure that *standardlized* the measure of linear interdependence between two variables, and tells how closely they move.
+  - The correlation coefficient will always take on a value between -1 and 1.
+
+**Pariplots** plot all column of a dataset against each other. 
+
+#### Spearman Correlation
+It forgets the variable value and consider only they relative position.
+
+#### Pearson Correlation
+The correlation between the rank coeffienients.
+
+#### Correlation Matrix
+Used to take a look a the corrlation between all variables in the dataset.
