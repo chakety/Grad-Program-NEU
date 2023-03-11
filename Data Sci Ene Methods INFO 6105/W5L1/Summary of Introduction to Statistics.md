@@ -29,3 +29,7 @@ For me: Statistics is the methodology to gathering all the information and seeki
   - It is in the original unit.
 - **Interquartile Range(IQR)**: Data is sorted into ascending order and divided into four quarters.
   - It measures then the arability between the upper(75th) and lower(25th) quartiles.  
+- All the result above can also be seen in the `df.describe()` function.
+  
+### Measures of relationship: Convariance and Correlation
+- **Convariance**
