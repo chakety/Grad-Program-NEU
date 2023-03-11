@@ -32,4 +32,7 @@ For me: Statistics is the methodology to gathering all the information and seeki
 - All the result above can also be seen in the `df.describe()` function.
   
 ### Measures of relationship: Convariance and Correlation
-- **Convariance**
+- **Convariance** is a measure that indicates how two variables are related from a linear perspective. 
+  - A positive covariance means the variabale are positively linearly related.
+- **Conrrelation** is the convariance renormalized, which is expressed in %. 
+- 
