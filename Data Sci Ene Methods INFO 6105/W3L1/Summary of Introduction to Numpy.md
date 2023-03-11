@@ -142,3 +142,45 @@ np.array(np.mat('1,2; 3,4'))
 ### Boolean indexing
 We can use boolean expression as index. 
 
+first in first, we need to create an array named `names`
+
+`names = np.array(['Pratiksha', 'dino', 'Xinlin', "Tianqi", "Pranshu"])`
+
+Next, we need to create an array with random data:
+
+`data = np.random.rand(5,5)`
+
+if we try `data[names == 'Pratiksha']`, we will get the value of first row in data. 
+
+`data[names == 'Pratiksha']` is also equalvent to `data[[ True, False, False, False, False]]`
+
+### Beginner Linear Algebra
+`np.inv` means inverse matrix
+
+two matrix X @ Y means matrix multiplication
+
+### Numpy *'Object'*
+```python
+class Human(object):
+    # A class attribute. It is shared by all instances of this class
+    species = "H. sapiens"
+
+    def __init__(self, name):
+        # Assign the argument to the instance's name attribute
+        self.name = name
+
+        # Initialize property
+        self.age = 0
+        
+    def say(self, msg):
+        return "{0}: {1}".format(self.name, msg)\
+
+a = Human("Dino")
+b = Human("Elon")
+c = np.array([a, b])
+
+#array([<__main__.Human object at 0x00000128670E03D0>,
+#       <__main__.Human object at 0x0000012866FEEC40>], dtype=object)
+```
+
+## Incredibly useful Numpy APIs
