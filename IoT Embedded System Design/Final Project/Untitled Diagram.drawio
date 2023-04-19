@@ -1,9 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T17:37:58.469Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.1.1" etag="F_OOnvnBRgfA7GtCFLJQ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T18:09:06.540Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="re5GOeslXMl4YvNRO4DG" version="21.1.1" type="github">
   <diagram name="Page-1" id="fxQLlxXaDlbLSnGlCWj5">
-    <mxGraphModel>
+    <mxGraphModel dx="1014" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-10" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/storage/Datacenter_Server_Half_Rack_ToR.svg;" vertex="1" parent="1">
+          <mxGeometry x="370" y="187.7" width="88.2" height="114.6" as="geometry" />
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-11" value="Broker" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="384.1" y="302.3" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.986;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="caLLGXFHj6UOVD_wTZwr-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="550" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-14" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.raspberrypi.com/app/uploads/2020/06/raspberrry_pi_logo.png;" vertex="1" parent="1">
+          <mxGeometry x="70" y="154" width="182" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.017;entryY=0.487;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="caLLGXFHj6UOVD_wTZwr-14" target="caLLGXFHj6UOVD_wTZwr-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="350" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-16" value="&lt;h1&gt;Raspberry Pi As Publisher&lt;/h1&gt;&lt;p&gt;Once the Camera detects human faces, the terminal will send &quot;Someone show up to Camera&quot;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="350" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-17" value="&lt;h1&gt;Raspberry Pi As Subscriber&lt;/h1&gt;&lt;div&gt;The message&amp;nbsp;&lt;/div&gt;&quot;Someone show up to Camera&quot;&amp;nbsp;&lt;div&gt;from publisher will be displayed in another terminal windows.&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="350" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="caLLGXFHj6UOVD_wTZwr-18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.raspberrypi.com/app/uploads/2020/06/raspberrry_pi_logo.png;" vertex="1" parent="1">
+          <mxGeometry x="540" y="140" width="182" height="182" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
