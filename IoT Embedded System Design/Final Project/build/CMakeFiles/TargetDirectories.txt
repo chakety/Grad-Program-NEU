@@ -1,0 +1,3 @@
+/home/pi/Desktop/Final-Project/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/Final-Project/build/CMakeFiles/CameraControl.dir
+/home/pi/Desktop/Final-Project/build/CMakeFiles/edit_cache.dir
